@@ -9,11 +9,11 @@ const Products = () => {
   //vamos a generar el contexto
   //y usar el global state a travez de la palabra ctx, el cual es retornado del hook
   const ctx = useContext(ProductsContext);
-  console.log(ctx);
+  console.log("ctx", ctx);
   const {helados, agregarHeladoAlCarrito} = ctx;
 
-  const manejarClick = elemento => {
-    agregarHeladoAlCarrito(elemento);  //global state function
+  const manejarClick = clickedHeladoObj => {
+    agregarHeladoAlCarrito(clickedHeladoObj);  //global state function
   }
 
   return (
